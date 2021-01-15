@@ -1,5 +1,15 @@
-const repeatNumbers = function(data) {
-  // Put your solution here
+const repeatNumbers = function (data) {
+  let str = "";
+  data.forEach((element, index, array) => {
+    for (let i = 0; i < element[1]; i++) {
+      str += element[0];
+    }
+    if (array.length > 1 && index < array.length - 1) {
+      str += ", ";
+    }
+    return str;
+  });
+  return str;
 };
 
 console.log(repeatNumbers([[1, 10]]));
