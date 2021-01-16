@@ -20,6 +20,7 @@ console.log(45 < coneVolume(3, 5) && coneVolume(3, 5) < 49);
 //prismVolume() will calculate the volume of a prism given a height, a width, and a depth
 const prismVolume = function (height, width, depth) {
   // Probably here too!
+  return height * width * depth;
 }
 
 console.log(prismVolume(3, 4, 5) === 60);
