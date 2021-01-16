@@ -12,6 +12,7 @@ console.log(4186 < sphereVolume(10) && sphereVolume(10) < 4189);
 //coneVolume() will calculate the volume of a cone given a radius and a height
 const coneVolume = function (radius, height) {
   // And here!
+  return PI * Math.pow(radius, 2) * height / 3;
 }
 
 console.log(45 < coneVolume(3, 5) && coneVolume(3, 5) < 49);
