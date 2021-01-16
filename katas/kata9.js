@@ -29,6 +29,19 @@ console.log(prismVolume(3, 4, 5) === 60);
 The totalVolume function should use the previous three functions to calculate the total volume of an attraction. */
 const totalVolume = function (solids) {
   // Code here? Yup!
+  let total = 0;
+  solids.forEach(element => {
+    let vol;
+    if (element.type === 'sphere') {
+      vol = sphereVolume(element.radius);
+    } else if (element.type === 'cone') {
+      vol = coneVolume(element.radius, element.height);
+    } else if (element.type === 'prism') {
+      vol = prismVolume(element.height, element.width, element.depth);
+    }
+    total += vol;
+  });
+  return total;
 }
 
 const largeSphere = {
